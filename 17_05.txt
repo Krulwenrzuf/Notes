@@ -1,0 +1,38 @@
+2023-05-17
+
+Wielowątkowość
+
+Operacje: //używane by uruchamiać kod
+  EXEC
+  IDLE
+
+Sekcja krytyczna //wygooglować
+  blok kodu który blokuje wykonanie innych wątków
+  robi to "mutex" mutexlock(n) mutexunlock(n)
+  mutexlock(n) sprawdza czy mutex jest zablokowany, jeśli nie to czeka, gdy zostanie zwolniony (mutexunlock(n)) automatycznie się uruchamia
+  n - obiekt typu mutex wspólny dla wątków
+  kod pomiędzy mutexlock a mutexunlock musi być najszybszy jak się da 
+
+Java - mutex
+  Object mutex = new Object();
+  sync(mutex){ // mutexlock
+    "blok kodu"
+    } // mutexunlock
+  kilka obiektów może mieć te same pole mutex
+  public sync void f(void){
+      sync(mutex)
+    }
+
+Java przykłady
+  wątki mają sync getcolor(), sync changecolor()
+  metody synchronized uruchamiają sync(this)
+  ale sync nie jest dobry bo może się zablokować //DEADLOCK
+  trzeba zrobić wspólny mutex (1 na cały program) 
+
+Scheduler
+  sprawdza okoliczne pola i blokuje je 
+  trzeba zrobić dobrego schedulera aby nie doszło do starvation (DEAD LIVE)
+    jak ktoś poprosił to w końcu musi dostać wątek
+
+  problem 5 ucztujących filozofów // semafory
+  łamanie symetrii nie działa, trzeba wprowadić menedżera

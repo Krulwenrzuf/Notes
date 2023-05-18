@@ -1,0 +1,89 @@
+FORMATOWANIE
+
+alamakota -> ala_ma_kota
+for(int i=0;i<n;i++) -> for (int i = 0; i < n; i++)
+f ( n ) -> f(n)
+odpowiednie entery
+
+BRAK INFORMACJI DO DEBUGu
+
+if (n < 2) 
+	throw "n < 2"
+->
+if (n < 2)
+	throw("n should be >= 2" + "pst" + n)
+
+if(a < 0 || b < 0)
+	throw
+-> rozdzielić na 2 ify
+
+Logger wtyczka
+
+if( SYSTEM_LOG_LEVEL > LOG_DEBUG_LEVEL )
+	print dupa1
+
+doxygen/javadoc od 4 listy trzeba to robic
+cpp >> include >> primes.hpp >> gdiv
+
+cppreference, example
+
+mutual exclusion
+
+kolejność
+1. interfejs
+2. test //corner casey, zwykłe casey, casey na dużych liczbach
+3. Kod
+ 3.1 
+
+STATYCZNA KLASA
+static znaczy że funkcja nie jest związana z obiektem tylko z klasą
+klasaa statyczna to taka z której nie możesz tworzyć obieku
+java:
+private Arraylib(){throw instanceerror();
+cpp:
+Arraylib() = delete;
+
+final - zmienna tylko do odczytu
+
+explicit - (wpisać przy funkcji w klasie) nie można zrobić "Foo f = 5" tylko "Foo f(5)"
+
+RULE OF 5
+Foo a(5);
+Foo b=a; //shallow copy
+
+nie używać new, tylko vector a do wskaźników smartpointer
+
+noexcept
+
+sstream
+
+size_t - tyle liczb aby zaadresować cały ram
+
+NOTATKI 2
+
+nie trzeba użysać enumów
+
+Java:
+1. prymitywne typy: zawsze przez kopie
+2. nie ma czegoś
+3. obiekt przez referencje 
+
+void f(Foo foo) wolne
+void f(Foo* foo) szybkie
+void f(Foo& foo) szybkie
+void f(const Foo* foo) szybkie i read only
+void f(const Foo& foo) szybkie i read only - (domyślny sposób działania na obiektach)
+
+pointer a referencja
+może być kilka pointerów i tylko jedna referencja
+pointer może wskazywać na null, referencja nie może być pusta
+ponter przez <- referencja przez .
+referencji nie można zmienić
+dziedziczenie wymaga wskaźnikow
+dynamiczne struktury - wskaźniki
+
+wielokąt to sześciokąt
+ma być dokumentacja doxygen do jednej klasy
+implements serialize - do zapisania do pliku
+do wybierania figury zrobić ShapeBuilder po którym dziedziczą inne buildery, nie robić zmienner wyboru figury
+errory robią popupy
