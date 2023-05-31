@@ -1,0 +1,54 @@
+drzewo binarne
+
+2 wskaźniki, na lewo i na prawo
+na lewo mniejsze na prawo większe elementy
+musi być jak najniższe
+wyszukiwanie znajduje liczbe w drzewie
+gdy elementy są posortowane to robi się z drzewa lista
+RBT - robi wysokość log(2)
+drzewo można skopiować, wygooglować scormera??
+
+stworzyć klase co pokazuje drzewo binarne
+ten sam kod obsługuje wszystkie typy na raz
+ma korzystać z template <template T> zamienia template na typ zmiennej
+
+<template T>
+T add(T a, T b)
+  return a+b;
+
+int a = add<int>(2,3);
+// sprawdzić c makra
+template wykorzystuje się gdy dla każdego typu operacja jest taka sama
+gdy używa + to trzeba go przeciążyć
+
+w javie nie ma przeciążania, trzeba użyć interfejsu
+np. implements comparable wtedy można go porównywać
+
+klasy mogą przyjmować template
+klasa drzewo ma w sobie prywatną klase node
+drzewo ma pole root - pierwszy element
+
+użytkownik ma podać co ma być w template
+NIE robić miliona if else 
+  tzn różne drzewa dla różnych typów, i if decyduje która metoda jest użyta
+  podzielić protokół na handshake (przydzielenie typu), oraz data processing (operacje na danych)
+  ??można użyć mapy lambd zamiast ifów
+
+parsowanie danych w c można użyć sstream,
+w javie się nie da, trzeba użyć polimorfizmu
+zrobić klase parser
+
+NA 4 -------------------
+
+klient    serwer
+request ->
+accept <-
+handshake ->
+klienci mają osobne drzewa
+
+bst drzewo z geeks for geeks
+
+serwer - sockety
+
+  
+
